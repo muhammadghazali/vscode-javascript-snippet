@@ -1,0 +1,31 @@
+{
+	// Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Initialize webpack config": {
+		"prefix": "webpack-config",
+		"body": [
+			"const path = require('path');",
+			"",
+			"module.exports = {",
+			"  entry: './src/index.js',",
+			"  output: {",
+			"    filename: 'bundle.js',",
+			"    path: path.resolve(__dirname, 'dist')",
+			"  }",
+			"};",
+			""
+		]
+	},
+	"Generate Node and browser module boilerplate": {
+		"prefix": "node-web-module",
+		"body": [
+			"(exports => (exports.greet = () => 'Hello world'))(",
+			"typeof exports === 'undefined' ? (this['$1'] = {}) : exports",
+			");"
+		],
+		"description": "Node and browser module boilerplate"
+	}
+}
